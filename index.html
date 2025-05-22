@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index td8 : fetch</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+</head>
+<body>
+<main id="photo">
+	<h1>Photo</h1>
+
+	<section id="la_photo">
+		<!-- Contenu de la photo inséré dynamiquement -->
+	</section>
+
+	<!-- <h4 id="la_categorie">Catégorie </h4> -->
+
+	<h4>Commentaires :</h4>
+	<ul id="les_commentaires">
+		<!-- Commentaires insérés dynamiquement -->
+	</ul>
+</main>
+
+<!-- Template Handlebars pour la photo -->
+<script id="photoTemplate" type="text/x-handlebars-template">
+	<img src="{{url}}" alt="{{titre}}" style="max-width: 100%; height: auto;">
+	<h4>Titre : {{titre}}</h4>
+	<p>Catégorie : {{categorie}}</p>
+	<p>Description : {{description}}</p>
+	<p>Type et dimension : {{type}}, {{largeur}} x {{hauteur}}</p>
+</script>
+
+<!-- Scripts -->
+<script type="module" src="./js/index.js" defer></script>
+</body>
+</html>
