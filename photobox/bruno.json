@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "photobox",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
