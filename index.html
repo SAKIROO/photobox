@@ -1,37 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title>index td8 : fetch</title>
-	<link rel="stylesheet" href="./css/index.css">
+	<title>Photobox</title>
 	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
 </head>
 <body>
-<main id="photo">
-	<h1>Photo</h1>
+<main>
+	<h1>Photobox</h1>
 
-	<section id="la_photo">
-		<!-- Contenu de la photo inséré dynamiquement -->
+	<!-- Section Galerie -->
+	<section id="galerie_section">
+		<h2>Galerie de Photos</h2>
+		<button id="btn_load_gallery">Charger la galerie</button>
+		<section id="la_galerie"></section>
+
+		<nav>
+			<button id="btn_first">Première page</button>
+			<button id="btn_prev">Page précédente</button>
+			<button id="btn_next">Page suivante</button>
+			<button id="btn_last">Dernière page</button>
+		</nav>
 	</section>
 
-	<!-- <h4 id="la_categorie">Catégorie </h4> -->
+	<hr>
 
-	<h4>Commentaires :</h4>
-	<ul id="les_commentaires">
-		<!-- Commentaires insérés dynamiquement -->
-	</ul>
+	<section id="photo_section">
+		<h2>Photo sélectionnée</h2>
+		<section id="la_photo"></section>
+
+		<h4>Commentaires :</h4>
+		<ul id="les_commentaires"></ul>
+	</section>
 </main>
 
-<!-- Template Handlebars pour la photo -->
 <script id="photoTemplate" type="text/x-handlebars-template">
-	<img src="{{url}}" alt="{{titre}}" style="max-width: 100%; height: auto;">
-	<h4>Titre : {{titre}}</h4>
-	<p>Catégorie : {{categorie}}</p>
-	<p>Description : {{description}}</p>
-	<p>Type et dimension : {{type}}, {{largeur}} x {{hauteur}}</p>
+	<div>
+		<img src="{{url}}" alt="{{titre}}" style="max-width: 100%; height: auto;">
+		<h4>Titre : {{titre}}</h4>
+		<p>Description : {{description}}</p>
+		<p>Type : {{type}}</p>
+		<p>Dimensions : {{largeur}} x {{hauteur}}</p>
+	</div>
 </script>
 
-<!-- Scripts -->
-<script type="module" src="./js/index.js" defer></script>
+<script type="module" src="./js/index.js"></script>
 </body>
 </html>
